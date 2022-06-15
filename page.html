@@ -1,0 +1,125 @@
+<html>
+<head>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="vanilla.js"></script>
+	<title>Ordiance</title>
+
+</head>
+<body style="background-color: black; background: url(background-image.jpg); margin: 0; padding: 0; ">
+
+	<div id="content-web" style="padding-top:50px!important">
+		<div class="first-part" style="width:50%;float:left;">
+			<img style="margin-left: 60px" src="Ordiance_Logo.svg" alt="Image">
+			<div style="color:white;margin-left: 60px;padding-top:100px;font-size: 55px;" class="font-body">We all are waiting for<br /> a smarter, cooler<br />CRM platform... The <br />wait is almost over.</div>
+			<div style="color:lightgray;margin-left: 60px;padding-top:20px;font-size:12px" class="font-paragraph">
+				With Ordiance's smart and intuitive CRM platform, experience modern<br />
+				and smart management and watch the windows of opportunities<br />
+				open.
+			</div>
+			<div style="color:white;margin-left: 60px;padding-top:60px;font-size:35px" class="font-body">
+				COMING SOON
+			</div>
+			<div style="float:left; padding-left:60px;padding-top:20px">
+				<img style="padding-right:10px" src="SocialMediaIcons/Facebook_Icon.svg" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/LinkedIn_Icon.png" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/Twitter_Icon.svg" alt="Image">
+			</div>
+		</div>
+		<div class="second-part" style="width:50%;float:left">
+			<img style="height:calc(100% - 42px); width:100%" src="Images/Desktop_Image.png" alt="Image">
+
+		</div>
+
+
+
+	</div>
+	<div id="content-tablet" style="padding-top:50px!important">
+		<div class="first-part" style="width:100%;float:left;height:50%">
+			<img style="margin-left: 60px" src="Ordiance_Logo.svg" alt="Image">
+			<div style="color:white;margin-left: 60px;padding-top:100px;font-size: 50px;" class="font-body">We all are waiting for a<br /> smarter, cooler CRM platform...<br /> The wait is almost over.</div>
+			<div style="color:lightgray;margin-left: 60px;padding-top:20px;font-size:20px" class="font-paragraph">
+				With Ordiance's smart and intuitive CRM platform, experience modern and smart<br />
+				management and watch the windows of opportunities 	open.<br />
+
+			</div>
+			<div style="color:white;margin-left: 60px;padding-top:80px;font-size:45px" class="font-body">
+				COMING SOON
+			</div>
+			<div style="float:left; padding-left:60px;padding-top:20px">
+				<img style="padding-right:10px" src="SocialMediaIcons/Facebook_Icon.svg" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/LinkedIn_Icon.png" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/Twitter_Icon.svg" alt="Image">
+			</div>
+		</div>
+		<div class="second-part" style="width:100%;float:right">
+			<img style="height:50%; width:calc(100% - 200px);float:right" src="Images/Tablet_Image.png" alt="Image">
+
+		</div>
+
+
+
+	</div>
+	<div id="content-mobile" style="padding-top:50px!important;height:calc(100% - 40px)">
+		<div class="first-part" style="width:100%;float:left;height:50%">
+			<img style="margin-left: 60px" src="Ordiance_Logo.svg" alt="Image">
+			<div style="color:white;margin-left: 60px;padding-top:120px;font-size: 70px;" class="font-body">We all are waiting for<br /> a smarter, cooler<br />CRM platform... The <br />wait is almost over.</div>
+			<div style="color:lightgray;margin-left: 60px;padding-top:20px;font-size:30px" class="font-paragraph">
+				With Ordiance's smart and intuitive CRM platform,<br />
+				experience modern and smart management and <br />
+				watch the windows of opportunities
+				open.
+			</div>
+			<div style="color:white;margin-left: 60px;padding-top:80px;font-size:70px" class="font-body">
+				COMING SOON
+			</div>
+			<div style="float:left; padding-left:80px;padding-top:20px">
+				<img style="padding-right:10px" src="SocialMediaIcons/Facebook_Icon.svg" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/LinkedIn_Icon.png" alt="Image">
+				<img style="padding-right:10px" src="SocialMediaIcons/Twitter_Icon.svg" alt="Image">
+			</div>
+		</div>
+		<div class="second-part" style="width:100%;float:left;">
+			<img align="bottom" style="height:50%; width:100%; width:calc(100% - 150px);float:right" src="Images/Mobile_Image.png" alt="Image">
+
+		</div>
+
+
+
+	</div>
+</body>
+<script type="text/javascript">
+	const userAgent = navigator.userAgent.toLowerCase();
+
+	var isMobile = /iPhone|Android/i.test(navigator.userAgent);
+	console.log(isMobile);
+
+	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+	console.log(isTablet)
+
+	if (isMobile) {
+		var element = document.getElementById('content-web');
+		element.style.display = 'none';
+		var element1 = document.getElementById('content-tablet');
+		element1.style.display = 'none';
+		var element2 = document.getElementById('content-mobile');
+		element2.style.display = 'block';
+
+	} else if (isTablet) {
+		var element = document.getElementById('content-web');
+		element.style.display = 'none';
+		var element1 = document.getElementById('content-tablet');
+		element1.style.display = 'block';
+		var element2 = document.getElementById('content-mobile');
+		element2.style.display = 'none';
+	} else {
+		var element = document.getElementById('content-web');
+		element.style.display = 'block';
+		var element1 = document.getElementById('content-tablet');
+		element1.style.display = 'none';
+		var element2 = document.getElementById('content-mobile');
+		element2.style.display = 'none';
+	}
+
+
+</script>
+</html>
